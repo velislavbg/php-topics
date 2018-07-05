@@ -6,5 +6,14 @@ how to visit site and extract tags from a page
 see code in folder code04
 step by step from revisions
 
+load page in a variable
+-----------------------
+use DOMDocument php 7 class to avoid regex manipulation
 
+extract tags
+-------------
 
+..  literalinclude:: code/Hoover.php
+    :langauge: php
+    
+function getTags()

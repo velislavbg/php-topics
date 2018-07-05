@@ -38,4 +38,31 @@ class Hoover
 		@$this->content->loadFromFile($url);
 		return $this->content;
 	}
+	
+	/*
+	 * Returns an array of values for $tag from $url
+	 * Tags with contetn == <tag>content</tag>
+	 * 
+	 * 
+	 * @param string $url = website
+	 * @param string $tag = tag to extract
+	 * @return array $result
+	 * 
+	 */
+	 public function getTags($url, $tag)
+	 {
+		 $count = 0;
+		 $result = [];
+		 $elements = $this->getContetn($url)->getElementByTagName($tag);
+		 foreach($elements as $node){
+		     $result[$count]['value'] = trum(preg_replace('/\s+/', ' ', $node->nodeValue));
+		     if ($node->hasAtrributes()) {
+			    foreach($node->attributes as $name => $attrNode) {
+				   $result[$count]['attributes'][$name] = $attribute->value;
+				}
+			 }
+			 $count++;
+		 }
+		 return $reault;
+	 }
 }  
