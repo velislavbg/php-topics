@@ -1,0 +1,13 @@
+Deep Web Scanner
+================
+
+explore href tags and scan child page
+
+we use Hoover class to extract href-s and scan links
+
+..  literalinclude::  code05/Deep.php
+    :language: php
+    :linenos:
+    
+yield turns method to a generator; expositng resutl immediately
+because result can be too large

@@ -17,3 +17,8 @@ extract tags
     :langauge: php
     
 function getTags()
+
+readings
+---------
+
+for other features `DOMDocument help <https://secure.php.net/manual/en/class.domdocument.php>`_
