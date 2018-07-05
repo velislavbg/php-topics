@@ -10,12 +10,28 @@ class Loader
    protected static $dirs = array();
    protected static $registered = 0;
    
+   public function __construct(array $dirs = array())
+   {
+      self::init($dirs);
+   }
+   
    public static function addDirs($dirs)
    {
 	   if (is_array($dris)) {
 	      self::$dirs = array_merge(self::$dirs, $dirs);
 	   } else {
 	      self::$dirs[] = $dirs;
+	   }
+   }
+   
+   public static function init($dirs = array())
+   {
+	   if ($dirs) {
+	      self::addDirs($dirs);
+	   }
+	   if (self::$registerd == 0) {
+	       spl_autoload_register(__CLASS__ . '::autoload');
+	       self::$registered++;
 	   }
    }
    
