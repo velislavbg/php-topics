@@ -1,0 +1,57 @@
+Installation
+=============
+
+
+- from source
+- from binaries
+- as AMP part
+
+from source (most difficult)
+-----------------------------
+
+you need C compiler, options for win, mac, linux on slide
+
+commands:
+- Configure
+- Make
+- Make Test
+- Make Instal
+
+options : Configure --help
+
+from binaries
+--------------
+
+see windows.php.net downloads
+
+on mac : use package manager 
+
+on linux : ise package system
+
+from *AMP (easiest)
+-------------------
+
+Apache Mysql Php
+
+www.easyphp.org
+www.zend.com/en/products/zend_server
+
+
+
+
+install non-core php extensions
+--------------------------------
+
+PPA repo
+
+see instructions on:
+-http://php.net/manual/en/install.general.php
+- http://www.mingw.org
+- https://msdn.microsoft.com/en-us/library/bb384838
+
+install vm
+-------------
+   vagrant
+       https://github.com/rlerdorf/php7dev
+   docker
+       https://hub.docker.com/r/coderstephen/php7/

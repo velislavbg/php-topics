@@ -1,0 +1,29 @@
+PHP Server, MySQL, PHPUnit
+=============================
+
+
+PHP builtin server
+--------------------
+
+for develompemnt only
+for production use separate web server
+
+php -S localhost:8080
+
+php -S localhost:8080 -t doc/root/folder
+
+MySQL test db
+----------------
+
+for mysql creation script see `repo <https://github.com/dbierer/php7cookbook>`_
+
+see sql code
+
+
+PHPUnit
+-----------------
+
+https://phpunit.de
+
+download .phar file
+

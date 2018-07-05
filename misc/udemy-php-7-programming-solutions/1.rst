@@ -1,14 +1,22 @@
 php-7-programming-solutions
 udemy
 
+:author:    Doug Bierer
+:publisher: Udemy
+:homepage:  ttps://www.udemy.com/php-7-programming-solutions
+:lastmodified: 2018
+:level:     intermediate
+
 course toc
 ----------
 
-==========  ==========================================  ========  ====================
-  No         Topic                                      Duration   Notes
-==========  ==========================================  ========  ====================
- 1           Building Foundations
- 1.1             PHP7 Instalation considerations                  `see <f-1-1.rst>`_
+==========  ======================================================  ========  ====================
+  No         Topic                                                  Duration   Notes
+==========  ======================================================  ========  ====================
+ 1.          Building Foundations
+ 1.1             PHP7 Instalation considerations                               `see <f-01-1.rst>`_
+ 1.2             Use PHP Server, Define MySQL and Install PHPUnit              `see <f-01-2.rst>`_
+ 1.3             Implement Class Autoloading                                   `see <f-01-3.rst>`_
  2.          Using PHP7 High Performance Features
  3.          Working with PHP Functional Programming
  4.          Working with PHP OOP
@@ -19,7 +27,7 @@ course toc
  9.          Implementing Software Design Patterns
  10.         Improving Web Secutity
  11.         Best Practices, Testing and Debugging
-==========  ==========================================  ========  ====================
+==========  ======================================================  ========  ====================
 
 
 

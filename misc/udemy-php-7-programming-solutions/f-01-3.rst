@@ -1,0 +1,20 @@
+Implement Class Autoloading
+============================
+
+.. toctree::
+   :maxdepth: 2
+
+place each class to a separate code
+
+global_autload() function
+--------------------------
+
+::.. code-block:: php
+  
+..  literalinclude:: Loader.php
+    :langauage: php
+    :linenos:
+    
+    
+    
+    
