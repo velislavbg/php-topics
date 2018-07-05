@@ -10,6 +10,14 @@ class Loader
    protected static $dirs = array();
    protected static $registered = 0;
    
+   public static function addDirs($dirs)
+   {
+	   if (is_array($dris)) {
+	      self::$dirs = array_merge(self::$dirs, $dirs);
+	   } else {
+	      self::$dirs[] = $dirs;
+	   }
+   }
    
    public function static function autoLoad($class)
    {
