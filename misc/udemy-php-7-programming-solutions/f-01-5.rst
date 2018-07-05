@@ -11,3 +11,11 @@ we use Hoover class to extract href-s and scan links
     
 yield turns method to a generator; expositng resutl immediately
 because result can be too large
+
+see app5.php
+
+
+reading About Generators
+-------------------------
+
+hpps://secure.php.net/manual/en/language.generators.syntax.php

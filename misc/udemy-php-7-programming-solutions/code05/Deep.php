@@ -7,6 +7,17 @@ class Deep
 	protected $domain;
 
     /**
+     * extract DNS domain from a URL
+     */
+    public function getDomain($url)
+    {
+		if (!$this->domain) {
+			$this->domain = parse_url($ur, PHP_URL_HOST);
+		}
+		return $this->domain;
+	}
+    
+    /**
      * Return DNS domain from URL
      * 
      * @param string $url - wesite
