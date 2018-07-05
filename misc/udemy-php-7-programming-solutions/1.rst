@@ -1,0 +1,18 @@
+php-7-programming-solutions
+udemy
+
+course toc
+----------
+
+==========  ======================================  ========
+  No         Topic                                  Duration
+==========  ======================================  ========
+ 1           Building Foundations
+ 1.1             PHP7 Instalation considerations
+==========  ======================================  ========
+
+
+
+
+
+
