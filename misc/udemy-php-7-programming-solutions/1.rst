@@ -4,12 +4,22 @@ udemy
 course toc
 ----------
 
-==========  ======================================  ========  ====================
-  No         Topic                                  Duration   Notes
-==========  ======================================  ========  ====================
+==========  ========================================  ========  ====================
+  No         Topic                                    Duration   Notes
+==========  ========================================  ========  ====================
  1           Building Foundations
  1.1             PHP7 Instalation considerations               `see <f-1-1.rst>`_
-==========  ======================================  ========  ====================
+ 2.          Using PHP7 High Performance Features
+ 3.          Working with PHP Functional Programming
+ 4.          Working with PHP OOP
+ 5.          Interacting with a Database
+ 6.          Building Scalable Websites
+ 7.          Accessing Web Services
+ 8.          Looking at Advanced Algorithms
+ 9.          Implementing Software Design Patterns
+ 10.         Improving Web Secutity
+ 11.         Best Practices, Testing and Debugging
+==========  ========================================  ========  ====================
 
 
 
