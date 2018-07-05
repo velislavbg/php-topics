@@ -1,0 +1,10 @@
+Hoovering a website
+======================
+
+how to visit site and extract tags from a page
+
+see code in folder code04
+step by step from revisions
+
+
+
