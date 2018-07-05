@@ -65,4 +65,23 @@ class Hoover
 		 }
 		 return $reault;
 	 }
+	 
+	 public function getAttribute($url, $attr, $domain = NULL)
+	 {
+		 $result = [];
+		 $elements = $this->getContetn($url)->getElementByTagName('*');
+		 foreach($elements as $node){
+		     if ($node->hasAtrributes($attr)) {
+				 $value = $node->getAttribute($attr);
+				 if ($domain) {
+					if (stripos($value, $domain) !== FALSE) {
+						$result[] = trim($value);
+					} 
+				 } else {
+				    $result[] = trim($value);
+				 }
+			 }
+		 }
+		 return $reault;
+	 }
 }  
