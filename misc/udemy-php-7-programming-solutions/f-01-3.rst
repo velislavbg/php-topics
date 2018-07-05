@@ -18,3 +18,26 @@ global_autload() function
     
     
     
+usage of loader
+
+..  code-block:: php
+
+   <?php
+   
+   // setup autoload class
+   require __DIR__ . '/../Application/Autoload/Loader.php';
+   
+   // add path dir to path
+   Application\Autoload\Loader::init(__DIR__ . '/..');
+   
+   // use autoloding
+   // we have a Test/TestClass.php file in project
+   
+   $test = new Application\Test\TestClass();
+   echo $test->getTest();
+   
+test on terminal
+
+   
+   
+   
