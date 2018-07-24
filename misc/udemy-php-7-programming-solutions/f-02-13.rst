@@ -1,0 +1,35 @@
+Recursive Directory Iterator
+=============================
+
+#. use autoload class
+#. make call to methods
+#. check output
+
+
+glob sandard function fx to search files
+
+SPL is a newer option to do the job
+
+ 
+general notes
+---------------
+
+
+coding
+-------
+
+**starting point**
+
+..  include::  Directory-1.php
+
+..  include::  Directory-2.php
+
+..  include::  Directory-3.php
+
+..  include::  Directory-4.php
+
+usage
+~~~~~~
+
+.. include:: run-13.php
+

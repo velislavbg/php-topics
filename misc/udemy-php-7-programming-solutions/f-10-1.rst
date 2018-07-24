@@ -1,0 +1,24 @@
+Filtering $_POST Data
+======================
+
+agenda
+------
+
+titles from 59..65
+
+
+
+
+filtering $_POST
+----------------
+
+- remote chars
+- encrypt/decrypt
+
+let's assume we want to save post data to a db table
+
+#. compare table structore and post data
+
+trim() remove spaces
+strlen() - ensure max length
+
