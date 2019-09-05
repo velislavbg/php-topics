@@ -2,7 +2,7 @@
 | no | title | duration | notes
 
 | 00
-| Introduction to Beachcasts - web development PHP Videos by Adam Culp
+| **Introduction to Beachcasts - web development PHP Videos by Adam Culp**
 |
 |
 
