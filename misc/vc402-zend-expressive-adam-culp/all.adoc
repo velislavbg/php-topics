@@ -1,5 +1,4 @@
 |====
-
 | 00
 | Introduction to Beachcasts - web development PHP Videos by Adam Culp
 |
