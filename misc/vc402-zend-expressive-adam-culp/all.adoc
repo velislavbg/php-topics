@@ -1,0 +1,89 @@
+|====
+
+| 00
+| Introduction to Beachcasts - web development PHP Videos by Adam Culp
+|
+|
+
+| 01
+| PHP web development environment with Docker tutorial - 001
+| 41:41
+|
+
+| 02
+| PhpStorm setup for PHP web development with Docker - 002
+| 24:25
+|
+
+| 03
+| Create PHP middleware with Zend Expressive php framework - 003
+| 28:28
+|
+
+| 04
+| Configure Doctrine ORM and Dbal CLI with composer - 004
+| 22:34
+|
+
+| 05
+| Create Doctrine ORM Entity and pagination in Expressive - 005
+| 30:46
+|
+
+| 06
+| Doctrine ORM Paginator in PHP REST API with Expressive - 006
+| 25:37
+|
+
+| 07
+| Creating Hypermedia (HAL) in PHP REST API in Expressive - 007
+| 23:40
+|
+
+| 08
+| Automate Hypermedia PHP REST API with Doctrine ORM - 008
+| 36:50
+|
+
+| 09
+| Create Handler middleware in Zend Expressive PHP REST API - 009
+| 26:06
+|
+
+| 10
+| UUID with Doctrine ORM in Zend Expressive PHP REST API - 010
+| 17:09
+|
+
+| 11
+| Update handler middleware in Zend Expressive PHP REST API - 011
+| 25:42
+|
+
+| 12
+| Delete handler middleware in Zend Expressive PHP REST API - 012
+| 22:41
+|
+
+| 13
+| List handler middleware in Zend Expressive PHP REST API - 013
+| 27:48
+|
+
+| 14
+| PHP DoctrineORM one-to-many self-referencing association 014
+| 20:11
+|
+
+| 15
+| Doctrine ORM one-to-many bi-directional association 015
+| 24:53
+|
+
+| 16
+| Behat for beginners functional REST API testing tutorial 016
+| 28:58
+|
+
+
+|====
