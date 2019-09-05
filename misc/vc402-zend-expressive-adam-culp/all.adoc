@@ -6,7 +6,7 @@
 |
 |
 
-| 01
+| [] 01
 | PHP web development environment with Docker tutorial - 001
 | 41:41
 |
@@ -16,7 +16,7 @@
 | 24:25
 |
 
-| 03
+| [x] 03
 | Create PHP middleware with Zend Expressive php framework - 003
 | 28:28
 |
