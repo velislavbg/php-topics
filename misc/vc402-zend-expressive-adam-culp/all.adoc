@@ -1,27 +1,27 @@
 |====
 | no | title | duration | notes
 
-| 00
-| **Introduction to Beachcasts - web development PHP Videos by Adam Culp**
+| **00**
+| Introduction to Beachcasts - web development PHP Videos by Adam Culp
 |
 |
 
-| [] 01
+| **01**
 | PHP web development environment with Docker tutorial - 001
 | 41:41
 |
 
-| 02
+| **02**
 | PhpStorm setup for PHP web development with Docker - 002
 | 24:25
 |
 
-| [x] 03
+| **03**
 | Create PHP middleware with Zend Expressive php framework - 003
 | 28:28
 |
 
-| 04
+| **04**
 | Configure Doctrine ORM and Dbal CLI with composer - 004
 | 22:34
 |
