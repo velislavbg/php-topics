@@ -1,0 +1,71 @@
+# vc402-01-02 ide phpstorm
+
+ide is not just for syntax highlighting
+
+bad quality video (re-download)
+
+install jetbarain toolbox
+
+php storm 2018.3
+
+## run php storm
+
+Open and show expressive folder 
+
+makes same as
+
+Create New Project from Existing Files
+
+### settings > appearance > custom font size : 22px
+    settings > editor > font > size : 20px
+
+### configure docker automation from phpstorm
+
+Docker tool panel
+
+see images and containers
+
+### create containers
+
+docker-compose.yml,  right click , run
+
+edit configurations @9:20
+
+### terminal in phpstorm
+
+pwd is expressive
+
+### db management from inside phpstorm
+
+
+data source > mysql settings
+
+
+### running phpunit @16:20
+
+cp phphunit.xml.dist phphunit.xml
+
+phpunit uses php cli
+
+
+settings > lang & frameworks > php
+
+  cli interpriter
+  ...
+  add From Docker , select Docker, select image name
+
+php 7.2.13 xdebug 2.6.1
+
+apply
+
+right click phpunit.xml 
+edit test frameworks
+add from remote interpreter
+
+phpunit 7.5.1 inside container
+
+now test runs 5 prebuilt tests
+
+
+
+

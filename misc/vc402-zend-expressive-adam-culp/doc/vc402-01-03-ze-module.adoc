@@ -1,0 +1,96 @@
+## 03 module with ze3
+
+using ze cli
+
+====
+cd src
+
+## list commands available
+php ./vendor/bin/expressive
+
+## alternativelly see scripts : expressive in composer.json
+composer expressive
+
+## create module
+php ./vendor/bin/expressive module:create Announcements
+ 
+====
+
+now we will have 
+
+- a folder src/Announcemets
+- a line for config the module in src/config/config.php
+- a line in composer.json psr-4 section
+
+### look at ConfigProvider.php
+
+### create handler (in context of PSR-15)
+
+====
+$c1 expressive handler:create Announcements\\Handler\\AnnouncementsReadHandler
+====
+
+error see error-01-03-a.png
+
+
+========== not finished , first must remove error
+to be able to create a handle in the new module
+
+
+
+2019-08-21 same command runs ok
+
+### create route
+
+see src/Announcements/src/Handler/AnnouncementsReadHandler.php
+
+edit src/Announcements/src/Handler/AnnouncementsReadHandler.php
+
+
+test handler by
+
+GET http://localhost:8080/announcemets   we get an error
+
+
+because we have not added a route to our new handler
+
+see src/config/routes.php
+
+add
+
+$app->get('/announcements[/]', \Announcements\Handler\AnnouncementsReadHandler::class,'announcements');
+
+now GET ... works
+
+### refactoring 1 - use factory
+
+we need to refine code
+
+Announcemets\ConfigProvider.php add a factory
+
+'factories'  => [
+                Handler\AnnouncementsReadHandler::class => AnnouncementsReadHandlerFactory::class
+            ],
+
+now we get the same result
+
+### refactoring 2 - move route config to the module it belongs
+
+we will use delegators
+
+see src/Announcements/src/RoutesDelegator.php
+
+next add 'delegators' to Announcements ConfigProvider.php
+
+'delegators' => [
+                \Zend\Expressive\Application::class => RoutesDelegator::class,
+            ],
+
+finnally we comment the line in app config
+
+and test
+
+everything works as before
+
+
+

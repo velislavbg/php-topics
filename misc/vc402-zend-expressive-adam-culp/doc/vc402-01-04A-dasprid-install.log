@@ -1,0 +1,26 @@
+[vf25@af25 src]$ $c1 require dasprid/container-interop-doctrine
+Using version ^1.1 for dasprid/container-interop-doctrine
+./composer.json has been updated
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 12 installs, 0 updates, 0 removals
+  - Installing doctrine/lexer (1.1.0): Downloading (100%)         
+  - Installing doctrine/annotations (v1.7.0): Downloading (100%)         
+  - Installing doctrine/reflection (v1.0.0): Downloading (100%)         
+  - Installing doctrine/event-manager (v1.0.0): Downloading (100%)         
+  - Installing doctrine/collections (v1.6.2): Downloading (100%)         
+  - Installing doctrine/cache (v1.8.0): Downloading (100%)         
+  - Installing doctrine/persistence (1.1.1): Downloading (100%)         
+  - Installing doctrine/inflector (v1.3.0): Downloading (100%)         
+  - Installing doctrine/common (v2.10.0): Downloading (100%)         
+  - Installing doctrine/dbal (v2.9.2): Downloading (100%)         
+  - Installing doctrine/orm (v2.6.3): Downloading (100%)         
+  - Installing dasprid/container-interop-doctrine (1.1.0): Downloading (connectiDownloading (100%)         
+doctrine/cache suggests installing alcaeus/mongo-php-adapter (Required to use legacy MongoDB driver)
+doctrine/orm suggests installing symfony/yaml (If you want to use YAML Metadata Mapping Driver)
+Writing lock file
+Generating autoload files
+ocramius/package-versions:  Generating version class...
+ocramius/package-versions: ...done generating version class
+[vf25@af25 src]$ 
+

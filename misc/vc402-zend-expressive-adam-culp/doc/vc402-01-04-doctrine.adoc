@@ -1,0 +1,86 @@
+## 04 add doctrine ORM to project
+
+run docker constainer
+
+open phpstorm resp client
+
+check GET locahost:8080/announcements
+
+### doctrine site
+
+www.doctrine-project.org/projects/orm.html
+
+composer require doctrine/orm
+
+### github DASPRiD/container-interop-doctrine
+
+package provide some extentions to work easier with doctrine; factories for psr-11
+
+composer require dasprid/container-interop-doctrine
+
+this package requires doctrine/orm
+
+### config ze
+
+
+
+we will add entity manager to configuration in 
+App/src/ConfigProvider.php because it is loaded always. We need doctrine entity manager, so we need to configure it. @9:00
+
+getDependencies()
+   factories
+      EntityManager::class => EntityManagerFactory::class
+
+factory is not the original doctrine but dasprid one.
+
+### config doctrine access from cli
+
+touch config/cli-config.php
+
+
+====
+  video @12:00
+====
+
+declare and create HelperSet !!!
+
+### create the db connection
+
+access docker db from cli
+
+#### connect to php docker machine 
+
+docker exec -it expressive_web_1 bash
+
+try +
+php vendor/bin/doctrine 
+
+produces manager because no config for db and entities is available
+
+
+
+touch config/autoload/doctrine.local.php
+
+====
+<?php
+...
+====
+
+mkdir src/App/src/Entity
+
+otherwise docker will produce exception
+
+
+
+again
+
+php vendor/bin/doctrine
+
+should work
+
+php vendor/bin/doctrine orm:info
+
+php vendor/bin/doctrine-dbal
+
+command are also available
+

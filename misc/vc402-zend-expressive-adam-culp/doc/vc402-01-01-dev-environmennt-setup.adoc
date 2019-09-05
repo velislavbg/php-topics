@@ -1,0 +1,245 @@
+#402-01-01 setup development environment part 1
+
+first we need ide and tools configuration
+
+## 0. php
+
+php -v
+
+7.2.10 on ubuntu
+
+## 1. composer
+
+use composer for your projects
+
+getcomposer.org
+
+v.1.8.0 at time of recording
+
+composer is compulsory when you use a framework
+
+namespaces since php 5.3 2011
+
+packagist.org - package storage
+
+## docker
+
+options to build test env locally
+
+.lamp
+.vagrant
+.docker with volume for source
+
+## app build with zend expressive framework
+
+docs.zendframework.com/zend-expressive/
+
+says
+
+$ composer create-project zendframework/zend-expressive-skeleton expressive
+
+3.2.3
+
+### ze wizzard
+
+-install type
+
+. minimal
+. flat (default)
+. modular
+
+choise 3
+
+
+
+- DI Container
+
+. aura.di
+. pimple
+. zend-servicemanager (default)
+. auryn
+. symphony DI container
+. php-di
+
+choise 3 zend-servicemanager
+
+
+- Router
+
+. aura.router
+. FastRoute (default)
+. zend-router
+
+choise 2 fast route
+
+use regex to match routes
+
+
+- Template engine
+
+. plates
+. twig
+. zend-view (requires zend-servicemanager)
+. none (default)
+
+choise 4 none because we will buils a rest app
+
+
+
+- error handler in development time
+
+. whoops (default)
+. none
+
+choise 1 whoops
+
+
+## explain project folders
+
+composer.json +
+composer.lock
+
+edit composer.json - name, keywords, 
+
+autoload is psr-4
+
+scripts area of composer.json
+
+## php built-in server
+
+option A with composer
+
+$ composer run --timeout=0 serve 
+
+
+option B direct
+
+$ php -S 0.0.0.0:8080 -t public/
+
+see docs quick-start
+
+$ composer development-status
+
+>zf-development-mode ENABLED
+whoop and php unit are accessible
+
+
+## create sql file for db objects
+
+use vi
+
+vi data/schema.sql
+
+
+copy-paste in video
+
+## add docker
+
+vi docker-compose.yaml
+
+====
+version: "2"
+services:
+   web:
+      build:
+         context: .
+         dockerfile: container-build/web/Dockerfile
+      environment:
+      - MYSQL_DATABASE=dbname
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=654321
+      - MYSQL_HOST=db
+      ports:
+      - "8080:80"
+      volumes:
+      - .:/var/www
+      depends_on:
+      -db
+
+   db:
+      image: mysql:5.7
+      ports:
+      - "6603:3306"
+      environment:
+      - MYSQL_ROOT_PASSWORD=654321
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=654321
+      - MYSQL_DATABASE=dbname
+      volumes:
+      - "mysql_data:/var/lib/mysql"
+      ./data/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+
+volumes:
+   mysql_data: {driver: local}
+====
+
+
+container-build/web/Dockerfile
+====
+FROM php:7.2-apache
+
+RUN apt-get update\
+  && apt-get install -y git zlib1g-dev mysql-client libzip-dev \
+  && docker-php-ext-install zip mysqli pdo_mysql \
+  && pecl install xdebug \
+  && docker-php-ext-enable xdebug \
+  && echo 'zend_extension="/usr/local/lib/php/extensions/no-debug-non-zts-20170718/xdebug.so"' >> /usr/local/etc/php/conf.d/xdebug.ini \
+  && echo 'xdebug.remote_enable=on' >> /usr/local/etc/php/conf.d/xdebug.ini \
+  && echo 'xdebug.remote_host=172.17.0.1' \
+# set autostart to on, so API calls auto trigger debugger
+  && echo 'xdebug.remote_autostart=0' >> /usr/local/etc/php/conf.d/xdebug.ini \
+  && echo 'xdebug.remote_connect_back=1' >> /usr/local/etc/php/conf.d/xdebug.ini \
+
+  && a2enmod rewrite \
+  && sed -i 's!/var/www/html!/var/www/public!g' /etc/apache2/sites-available/000-default.conf \
+  && mv /var/www/html /var/www/public \
+  && curl -sS https://getcomposer.org/installer \
+   | php -- --install-dir=/usr/local/bin --filename=composer \
+  && echo "AllowEncodedSlashes On" >> /etc/apache2/apache2.conf
+
+WORKDIR /var/www
+
+====
+
+we use php module with apache2
+
+7.3 works with some errors
+
+php:7.2-apache uses ubuntu
+
+docker-php-ext-install is special cmd to install php extensions
+
+omit sudo because we run container as root
+
+## run docker to build the image "web"
+
+[web]$ docker-compose up -d
+
+-d as daemon
+
+this takes 2-3 minutes
+
+
+$ docker ps
+
+2 containers are running
+
+
+load localhost:8080
+
+there is a bug in diactoros @38:18
+
+fix it but revert to prev version
+
+edit composer.json
+
+from "zendframework/zend-diactoros":"^1.7.1 || ^2.0"
+
+remove || ^2.0
+
+(I did not do this and everything works wo any error)
+
+[expressive]$ composer update
+
+
+

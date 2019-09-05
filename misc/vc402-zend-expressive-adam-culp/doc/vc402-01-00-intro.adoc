@@ -1,0 +1,9 @@
+# 402-00 about video series
+
+Adam Culp series to excersize zend expressive and doctrine
+
+aim - video once a week
+
+start recording 2018-12
+
+
